@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budget-app
+  namespace: penny-compass-inc
+spec:
+  selector:
+    matchLabels:
+      app: budget-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: budget-app
+    spec:
+      containers:
+        - name: budget-app
+          image: abammeke/budget-app:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: docker-hub-credentials
