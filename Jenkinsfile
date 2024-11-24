@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHubCredentials') {
-                        customImage.push('latest')
+                        customImage.push()
                     }
                 }
             }
@@ -61,7 +61,7 @@ pipeline {
     post {
         cleanup {
             sh "docker rmi abammeke/budget-app:${BUILD_NUMBER}"
-             sh "docker rmi registry.hub.docker.com/abammeke/budget-app"
+             sh "docker rmi registry.hub.docker.com/abammeke/budget-app:${BUILD_NUMBER}"
         }
     }
 }

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: budget-app
-  namespace: penny-compass-inc
+  namespace: dazee-banking-app
 spec:
   selector:
     matchLabels:
