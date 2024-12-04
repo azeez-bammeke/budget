@@ -2,19 +2,20 @@ import React, {Fragment} from "react";
 import {Checkbox, Form, Segment} from "semantic-ui-react";
 
 
-function EntryForm({description, value, isExpense, setValue, setDescription, setIsExpense}){
+function EntryForm({description= "",
+                       value = 0,
+                       isExpense = true,
+                       setValue,
+                       setDescription,
+                       setIsExpense}){
     return (
         <Fragment>
-            <Form.Group>
+            <Form.Group widths={3}>
                 <Form.Input
                     icon={'tags'} width={12} label={'Description'}
                     placeholder={"New shinny thing"}
                     value={description}
-                    onChange={(event) => {
-                        console.log(event.target.value)
-                        setDescription((event.target.value))
-                    }
-                    }
+                    onChange={(event) => setDescription((event.target.value))}
                 />
                 <Form.Input
                     icon={'dollar'} width={4}
@@ -39,4 +40,4 @@ function EntryForm({description, value, isExpense, setValue, setDescription, set
 
 
 
-export default EntryForm
+export default EntryForm;
