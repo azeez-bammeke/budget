@@ -1,12 +1,21 @@
+import entriesActionTypes from "../actions/entries.actions";
 
 const entriesReducer = (state = initialEntries, action) => {
     let newEntriesState
     switch (action.type) {
-        case 'ADD_ENTRY':
-            newEntriesState =  state.concat({...action.payload})
+        case entriesActionTypes.POPULATE_ENTRIES:
+            return action.payload
+        case entriesActionTypes.ADD_ENTRY:
+            newEntriesState = state.concat({...action.payload})
             return newEntriesState
-        case 'REMOVE_ENTRY':
+        case entriesActionTypes.REMOVE_ENTRY:
             newEntriesState = state.filter(entry => entry.id !== action.payload.id)
+            return newEntriesState
+        case entriesActionTypes.POPULATE_ENTRY_VALUES:
+        case entriesActionTypes.UPDATE_ENTRY:
+            newEntriesState = [...state]
+            const index = newEntriesState.findIndex(entry => entry.id === action.payload.id)
+            newEntriesState[index] = {...newEntriesState[index], ...action.payload.entry}
             return newEntriesState
         default:
             return state
@@ -15,29 +24,4 @@ const entriesReducer = (state = initialEntries, action) => {
 
 export default entriesReducer;
 
-let initialEntries = [
-    {
-        id: 1,
-        description: "Work Income",
-        value : 111000,
-        isExpense : false
-    },
-    {
-        id: 2,
-        description : "Rent",
-        value : 1000,
-        isExpense : true
-    },
-    {
-        id: 3,
-        description : "Water bill",
-        value : 1056,
-        isExpense : true
-    },
-    {
-        id: 4,
-        description : "Power bill",
-        value : 15,
-        isExpense : true
-    }
-]
+let initialEntries = []

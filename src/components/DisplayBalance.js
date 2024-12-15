@@ -1,8 +1,7 @@
 import React from "react";
 import {Statistic} from "semantic-ui-react";
 
-function DisplayBalance(props){
-    const {title, value, color='green', size= 'tiny'} = props;
+function DisplayBalance({title, value = 0.00, color='green', size= 'tiny'}){
     return (
         <Statistic color={color} size={size}>
             <Statistic.Label style={{textAlign : "left"}}>

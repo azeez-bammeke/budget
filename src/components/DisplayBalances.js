@@ -3,7 +3,7 @@ import {Grid, Segment} from "semantic-ui-react";
 import DisplayBalance from "./DisplayBalance";
 
 
-function DisplayBalances({incomeTotal, expenseTotal}) {
+function DisplayBalances({incomeTotal = 0.00, expenseTotal = 0.00}) {
     return (
         <Segment textAlign={"center"}>
             <Grid columns={2}>
