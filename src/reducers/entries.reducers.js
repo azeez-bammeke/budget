@@ -5,10 +5,10 @@ const entriesReducer = (state = initialEntries, action) => {
     switch (action.type) {
         case entriesActionTypes.POPULATE_ENTRIES:
             return action.payload
-        case entriesActionTypes.ADD_ENTRY:
+        case entriesActionTypes.ADD_ENTRY_RESULT:
             newEntriesState = state.concat({...action.payload})
             return newEntriesState
-        case entriesActionTypes.REMOVE_ENTRY:
+        case entriesActionTypes.REMOVE_ENTRY_RESULT:
             newEntriesState = state.filter(entry => entry.id !== action.payload.id)
             return newEntriesState
         case entriesActionTypes.POPULATE_ENTRY_VALUES:

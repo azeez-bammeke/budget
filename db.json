@@ -6,7 +6,7 @@
     },
     {
       "id": "2",
-      "description": "Rent"
+      "description": "Cleaning"
     },
     {
       "id": "3",
@@ -14,7 +14,7 @@
     },
     {
       "id": "4",
-      "description": "Power bill"
+      "description": "Dev cost and server"
     },
     {
       "id": "5",
@@ -22,39 +22,66 @@
     },
     {
       "id": "6",
-      "description": "Power bill 2"
+      "description": "Car monthly bill"
+    },
+    {
+      "id": "dced79cd-c293-4d93-a105-c4c101f7df57",
+      "description": "Item"
+    },
+    {
+      "id": "699f0cd0-8cec-4937-8b49-9be0181bb82e",
+      "description": "New test"
+    },
+    {
+      "id": "4fd8c17b-ac27-485b-a4bd-1f6923f21818",
+      "description": "Newesr"
     }
   ],
   "values": [
-      {
-        "id": "1",
-        "value": 111000,
-        "isExpense": false
-      },
-      {
-        "id":  "2",
-        "value": 1000,
-        "isExpense": true
-      },
-      {
-        "id":  "3",
-        "value": 1056,
-        "isExpense": true
-      },
-      {
-        "id":  "4",
-        "value": 15,
-        "isExpense": true
-      },
-      {
-        "id":  "5",
-        "value": 15000,
-        "isExpense": true
-      },
-      {
-        "id":  "6",
-        "value": 15000,
-        "isExpense": true
-      }
-    ]
+    {
+      "id": "1",
+      "value": 111000,
+      "isExpense": false
+    },
+    {
+      "id": "2",
+      "value": 1000,
+      "isExpense": true
+    },
+    {
+      "id": "3",
+      "value": 1056,
+      "isExpense": true
+    },
+    {
+      "id": "4",
+      "value": 15,
+      "isExpense": true
+    },
+    {
+      "id": "5",
+      "value": 15000,
+      "isExpense": true
+    },
+    {
+      "id": "6",
+      "value": 15000,
+      "isExpense": true
+    },
+    {
+      "id": "dced79cd-c293-4d93-a105-c4c101f7df57",
+      "value": "60546",
+      "isExpense": true
+    },
+    {
+      "id": "699f0cd0-8cec-4937-8b49-9be0181bb82e",
+      "value": "605",
+      "isExpense": false
+    },
+    {
+      "id": "4fd8c17b-ac27-485b-a4bd-1f6923f21818",
+      "value": "652",
+      "isExpense": false
+    }
+  ]
 }
